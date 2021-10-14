@@ -142,3 +142,45 @@ img {
         background-size: cover;
     }
 }
+
+/* ==== Categories ==== */
+.categories {
+    margin-bottom: 4rem;
+}
+
+.categories .title {
+    margin: 0;
+}
+
+.categories-list {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .categories-list {
+        flex-direction: row;
+    }
+}
+
+.category {
+    text-align: center;   
+}
+
+.category img {
+    width: 100%;
+}
+
+.category a {
+    display: block;
+    padding: 1.5rem 0;
+    font-size: 2rem;
+}
+
+.category a:hover {
+    background-color: #037bc0;
+    color: white;
+    border-bottom-right-radius: 2rem;
+}
