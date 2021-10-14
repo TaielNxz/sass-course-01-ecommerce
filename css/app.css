@@ -184,3 +184,52 @@ img {
     color: white;
     border-bottom-right-radius: 2rem;
 }
+
+/* ==== About Us ==== */
+.us {
+    background-image: 
+        linear-gradient( to bottom, transparent 0%, transparent 50%, #037bc0 50%, #037bc0 100% ),
+        url(../img/nosotros.jpg);
+    background-size: 
+        100%,
+        70rem;
+    background-position: top left;
+    background-repeat: no-repeat;
+}
+@media (min-width: 768px) {
+    .us {
+        background-image: 
+            linear-gradient( to right, transparent 0%, transparent 50%, #037bc0 50%, #037bc0 100% ),
+            url(../img/nosotros.jpg);
+        background-size: 
+            100%,
+            90rem;
+        background-position: center left;
+    }
+}
+@media (min-width: 1200px) {
+    .us {
+        background-size: 
+            100%,
+            50%;
+    } 
+}
+
+.us-grid {
+    display: grid;
+    grid-template-rows: repeat( 2, 1fr );
+}
+.text-us {
+    grid-row: 2 / 3;
+    color: #fff;
+    padding: 4rem;
+}
+@media (min-width: 768px) {
+    .us-grid {
+        grid-template-rows: unset;
+        grid-template-columns: repeat( 2, 1fr );
+    }
+    .text-us {
+        grid-column: 2 / 3;
+    }
+}
