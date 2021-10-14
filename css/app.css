@@ -88,3 +88,39 @@ img {
     }
 }
 
+/* ==== Header ==== */
+.site-name {
+    margin: 4rem 0;
+    text-align: center;
+}
+
+.site-name span{
+    color: #037bc0;
+}
+
+.nav-conteiner {
+    border: 1px solid #e1e1e1;
+}
+
+.nav-principal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .nav-principal {
+        flex-direction: row;
+    }
+}
+
+.nav-principal a {
+    width: 100%;
+    text-align: center;
+    padding: 1.5rem 0;
+}
+
+.nav-principal a:hover {
+    background-color: hsl(0, 0%, 96%);
+    font-weight: 700;
+}
