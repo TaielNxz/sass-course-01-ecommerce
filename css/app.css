@@ -453,3 +453,29 @@ img {
 .aside li:hover {
     font-weight: 700;
 }
+
+/* ==== Gallery ==== */
+
+.gallery {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 4rem 0;
+    display: grid;
+    gap: 2rem;
+}
+@media (min-width: 768px) {
+    .gallery {
+        grid-template-columns: repeat( 2, 1fr );
+    }
+}
+@media (min-width: 998px) {
+    .gallery {
+        grid-template-columns: repeat( 3, 1fr );
+    }
+}
+
+.gallery img {
+    height: 40rem;
+    width: 40rem;
+    object-fit: cover;
+}
