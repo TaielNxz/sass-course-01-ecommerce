@@ -235,10 +235,14 @@ img {
 }
 
 /* ==== Product ==== */
+.products {
+    margin-bottom: 4rem;
+}
+
 @media (min-width: 768px) {
     .products {
         width: 95%;
-        margin: 0 auto;
+        margin: 0 auto 4rem auto;
     }
 }
 
@@ -315,4 +319,43 @@ img {
 .product .price {
     font-weight: 900;
     font-size: 3rem;
+}
+
+/* ==== Footer ==== */
+.footer {
+    border-top: 1px solid #e1e1e1;
+}
+
+@media (min-width: 768px) {
+    .footer-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.footer-content {
+    margin: 4rem 0;
+    text-align: center;
+}
+
+.footer-content h3 {
+    margin: 0;
+}
+
+.footer-content nav {
+    display: flex;
+    flex-direction: column;
+}
+.footer-content a {
+    padding: 0.5rem 0;
+}
+.footer-content a:hover {
+    font-weight: 700;
+}
+
+.copyright {
+    border-top: 1px solid #e1e1e1;
+    text-align: center;
+    margin: 0;
+    padding: 2rem 0;
 }
