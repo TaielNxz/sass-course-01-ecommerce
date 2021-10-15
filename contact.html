@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Ecommerce - Cotnact</title>
     <!-- Normalize -->
     <link rel="stylesheet" href="css/normalize.css">
     <!-- Fonts -->
@@ -25,13 +25,77 @@
                 <a href="shop.html">Tienda</a>
                 <a href="blog.html">Blog</a>
                 <a href="gallery.html">Galería</a>
-                <a href="contact.html">Contacto</a>
+                <a href="contact.html" class="nav-active">Contacto</a>
             </nav>
         </div>
     </header>
 
     <main>
+        <h2 class="title">Contacto</h2>
+        <form class="form conteiner">
+            <fieldset>
+                <legend>Tus datos</legend>
+                <div class="field">
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" placeholder="Tu Nombre">
+                </div>
+                <div class="field">
+                    <label for="subject">Asunto:</label>
+                    <input type="text" id="subject" placeholder="Tu Asunto">
+                </div>
+                <div class="field">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" placeholder="Tu Email">
+                </div>
+                <div class="field">
+                    <label for="tel">Teléfono:</label>
+                    <input type="tel" id="tel" placeholder="Tu Teléfono">
+                </div>
+                <div class="field">
+                    <label for="message">Mensaje:</label>
+                    <textarea id="message" cols="10" rows="10"></textarea>
+                </div>
+            </fieldset>
 
+            <fieldset>
+                <legend>País</legend>
+                <div class="field">
+                    <label for="country">País:</label>
+                    <select id="country">
+                        <option value="MX">México</option>
+                        <option value="PR">Perú</option>
+                        <option value="CL">Colombia</option>
+                        <option value="AR">Argentina</option>
+                        <option value="ES">España</option>
+                        <option value="CH">Chile</option>
+                    </select>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Información Extra</legend>
+                <div class="field-radio">
+                    <label for="client">Cliente:</label>
+                    <input type="radio" id="client" name="type">
+                </div>
+                <div class="field-radio">
+                    <label for="provider">Proveedor:</label>
+                    <input type="radio" id="provider" name="type">
+                </div>
+                <div class="field">
+                    <label for="category">Categoria de Interés:</label>
+                    <input list="category" name="category">
+                    <datalist id="category">
+                        <option value="Cocina"></option>
+                        <option value="Exterior"></option>
+                        <option value="Recamaras"></option>
+                        <option value="Oficina"></option>
+                        <option value="Televisión"></option>
+                    </datalist>
+                </div>
+            </fieldset>
+            <input type="submit" class="btn input-submit">
+        </form>
     </main>
 
     <footer class="footer"> 

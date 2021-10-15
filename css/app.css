@@ -58,6 +58,10 @@ img {
     display: block;
 }
 
+textarea {
+    resize: none;
+}
+
 .conteiner {
     max-width: 120rem;
     margin: 0 auto;
@@ -478,4 +482,75 @@ img {
     height: 40rem;
     width: 40rem;
     object-fit: cover;
+}
+
+/* ==== Form ==== */
+
+.form {
+    margin: 0 auto 4rem auto;
+    width: 95%;
+}
+@media (min-width: 768px) {
+    .form {
+        width: 50%;
+    }
+}
+
+.form fieldset {
+    border: 1px solid #000;
+    margin-bottom: 4rem;
+    padding: 2rem;
+}
+.form legend {
+    background-color: #037bc0;
+    color: #fff;
+    font-weight: 900;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 1rem;
+    width: 100%;
+}
+
+/* ==== Form - fields ==== */
+.field{
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 0;
+}
+
+@media (min-width: 768px) {
+    .field {
+        flex-direction: row;
+    }
+    .field label {
+        flex-basis: 10rem;
+    }
+}
+
+.field input:not([type="radio"]),
+.field textarea,
+.field select {
+   width: 100%;
+   padding: 1rem;
+}
+
+.field-radio {
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.field-radio label {
+    flex-basis: 9rem;
+}
+
+/* ==== Form - submit  ==== */
+.input-submit {
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .input-submit {
+        width: 50%;
+    }
 }
