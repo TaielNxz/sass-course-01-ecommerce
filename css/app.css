@@ -359,3 +359,34 @@ img {
     margin: 0;
     padding: 2rem 0;
 }
+
+/* ==== Site Us ==== */
+
+.site-us {
+    margin-bottom: 4rem;
+}
+
+.site-us .title {
+    margin: 0;
+}
+
+.us-content {
+    display: grid;
+    grid-template-columns: repeat( 2, 1fr );
+    gap: 2rem;
+}
+
+.us-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.us-content img {
+    height: contain;
+}
+
+.us-content p {
+    margin: 0;
+}
