@@ -368,7 +368,6 @@ img {
     display: grid;
     gap: 2rem;
 }
-
 @media (min-width: 768px) {
     .us-content {
         grid-template-columns: repeat( 2, 1fr );
@@ -383,11 +382,74 @@ img {
     width: 90%;
     margin: 0 auto;
 }
-
 .us-content img {
     height: contain;
 }
-
 .us-content p {
     margin: 0;
+}
+
+/* ==== Blog ==== */
+
+.blog {
+    margin-bottom: 4rem;
+}
+
+.blog-grid {
+    display: grid;
+    gap: 4rem;
+}
+
+@media (min-width: 768px) {
+    .blog-grid {
+        grid-template-columns: 2fr 1fr;
+    }
+}
+
+/* ==== Blog - posts ==== */
+.posts {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.post {
+    border-top: 1px solid #e1e1e1;
+    margin-bottom: 4rem;
+}
+
+.post-content .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.post-content .info p {
+    font-weight: 700;
+    margin: 1rem 0;
+}
+
+@media (min-width: 768px) {
+    .post-content .info {
+        flex-direction: row;
+    }
+    .post-content .info p {
+        margin: 2rem 0;
+    }
+}
+
+.post-content .info span {
+    color: #037bc0;
+}
+
+/* ==== Blog - aside ==== */
+.aside {
+    border-top: 1px solid #e1e1e1;
+    width: 90%;
+    margin: 0 auto;
+}
+.aside h3 {
+    margin-top: 0;
+}
+.aside li:hover {
+    font-weight: 700;
 }
