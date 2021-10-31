@@ -1,21 +1,27 @@
 :root {
+  /* fonts */
   --primaryFont: "Playfair Display", serif;
   --secondaryFont: "Raleway", sans-serif;
 
+  /* website colors */
   --primaryColor: hsl(202, 97%, 38%);
-  --secondaryColor      : hsl(75, 100%, 37%);
+  --secondaryColor: hsl(75, 100%, 37%);
   --secondaryColorDarken: hsl(75, 100%, 30%);
 
-
-  --black:hsl(0, 0%, 0%);
+  /* colors */
+  --black: hsl(0, 0%, 0%);
   --grey: hsl(0, 0%, 88%);
-  --white      : hsl(0, 0%, 100%);
+  --white: hsl(0, 0%, 100%);
   --whiteDarken: hsl(0, 0%, 95%);
 }
 
+/* ==========================================================================
+  Global Styles
+  ========================================================================== */
+
 html {
   box-sizing: border-box;
-  font-size: 62.5%; /* 1REM = 10px */
+  font-size: 62.5%; /* 1rem = 10px */
 }
 
 *,
@@ -30,7 +36,18 @@ body {
   line-height: 2;
 }
 
-/* === Globales === */
+img {
+  display: block;
+  max-width: 100%;
+}
+
+textarea {
+  resize: none;
+}
+
+/* ==========================================================================
+  Typography
+  ========================================================================== */
 
 h1,
 h2,
@@ -65,14 +82,9 @@ a {
   text-decoration: none;
 }
 
-img {
-  display: block;
-  max-width: 100%;
-}
-
-textarea {
-  resize: none;
-}
+/* ==========================================================================
+  Utility classes 
+  ========================================================================== */
 
 .conteiner {
   max-width: 120rem;
@@ -109,7 +121,9 @@ textarea {
   }
 }
 
-/* ==== Header ==== */
+/* ==========================================================================
+  .header 
+  ========================================================================== */
 
 .site-name {
   margin: 0;
@@ -118,6 +132,9 @@ textarea {
 .site-name span {
   color: var(--primaryColor);
 }
+
+/* .header | .nav-principal
+   ========================================================================== */
 
 .nav-conteiner {
   border: 1px solid var(--grey);
@@ -129,25 +146,27 @@ textarea {
   align-items: center;
 }
 
-@media (min-width: 768px) {
-  .nav-principal {
-    flex-direction: row;
-  }
-}
-
 .nav-principal a {
   width: 100%;
   padding: 1.5rem 0;
   text-align: center;
 }
 
-.nav-principal a:hover,
-.nav-active {
+.nav-active,
+.nav-principal a:hover {
   font-weight: 700;
   background-color: var(--whiteDarken);
 }
 
-/* ==== Hero ==== */
+@media (min-width: 768px) {
+  .nav-principal {
+    flex-direction: row;
+  }
+}
+
+/* ==========================================================================
+  .hero 
+  ========================================================================== */
 
 .hero {
   width: 100%;
@@ -164,7 +183,9 @@ textarea {
   }
 }
 
-/* ==== Categories ==== */
+/* ==========================================================================
+  .categories 
+  ========================================================================== */
 
 .categories {
   margin-bottom: 4rem;
@@ -182,6 +203,9 @@ textarea {
     flex-direction: row;
   }
 }
+
+/* .categories | .category
+   ========================================================================== */
 
 .category {
   text-align: center;
@@ -203,7 +227,9 @@ textarea {
   border-bottom-right-radius: 2rem;
 }
 
-/* ==== About Us ==== */
+/* ==========================================================================
+  .us
+  ========================================================================== */
 
 .us {
   background-image: linear-gradient(
@@ -240,6 +266,9 @@ textarea {
   }
 }
 
+/* .us | .us-grid
+   ========================================================================== */
+
 .us-grid {
   display: grid;
   grid-template-rows: repeat(2, 1fr);
@@ -256,22 +285,18 @@ textarea {
     grid-template-rows: unset;
     grid-template-columns: repeat(2, 1fr);
   }
+
   .text-us {
     grid-column: 2 / 3;
   }
 }
 
-/* ==== Product ==== */
+/* ==========================================================================
+  .products
+  ========================================================================== */
 
 .products {
   margin-bottom: 4rem;
-}
-
-@media (min-width: 768px) {
-  .products {
-    width: 95%;
-    margin: 0 auto 4rem auto;
-  }
 }
 
 .products-list {
@@ -280,11 +305,19 @@ textarea {
 }
 
 @media (min-width: 768px) {
+  .products {
+    width: 95%;
+    margin: 0 auto 4rem auto;
+  }
+
   .products-list {
     grid-template-columns: repeat(6, 1fr);
     gap: 2rem;
   }
 }
+
+/* .products | product
+   ========================================================================== */
 
 @media (min-width: 768px) {
   .product:nth-child(1) {
@@ -314,16 +347,6 @@ textarea {
   }
 }
 
-.text-product {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  padding: 2rem;
-  color: var(--white);
-  text-align: center;
-  background-color: var(--primaryColor);
-}
-
 .product img {
   width: 100%;
   object-fit: cover;
@@ -336,22 +359,37 @@ textarea {
   }
 }
 
-.product h3 {
+/* .products | .product | .text-product
+   ========================================================================== */
+
+.text-product {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 2rem;
+  color: var(--white);
+  text-align: center;
+  background-color: var(--primaryColor);
+}
+
+.text-product h3 {
   font-size: 4rem;
   font-weight: 700;
 }
 
-.product h3,
-.product p {
+.text-product h3,
+.text-product p {
   margin: 0;
 }
 
-.product .price {
+.text-product .price {
   font-size: 3rem;
   font-weight: 900;
 }
 
-/* ==== Footer ==== */
+/* ==========================================================================
+  .footer
+  ========================================================================== */
 
 .footer {
   border-top: 1px solid var(--grey);
@@ -363,6 +401,9 @@ textarea {
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
+/* .footer | .footer-content
+   ========================================================================== */
 
 .footer-content {
   margin: 4rem 0;
@@ -393,15 +434,24 @@ textarea {
   border-top: 1px solid var(--grey);
 }
 
-/* ==== Site Us ==== */
+/* ==========================================================================
+  [us.html]  .site-us
+  ========================================================================== */
 
 .site-us {
   margin-bottom: 4rem;
 }
 
+/* [us.html]  .site-us | .us-content 
+   ========================================================================== */
+
 .us-content {
   display: grid;
   gap: 2rem;
+}
+
+.us-content img {
+  height: contain;
 }
 
 @media (min-width: 768px) {
@@ -409,6 +459,9 @@ textarea {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
+/* [us.html]  site-us | us-description 
+   ========================================================================== */
 
 .us-description {
   display: flex;
@@ -419,15 +472,13 @@ textarea {
   gap: 2rem;
 }
 
-.us-content img {
-  height: contain;
-}
-
-.us-content p {
+.us-description p {
   margin: 0;
 }
 
-/* ==== Blog ==== */
+/* ==========================================================================
+  [blog.html]  .blog
+  ========================================================================== */
 
 .blog {
   margin-bottom: 4rem;
@@ -444,7 +495,8 @@ textarea {
   }
 }
 
-/* ==== Blog - posts ==== */
+/* [blog.html]  .blog | .posts
+   ========================================================================== */
 
 .posts {
   width: 90%;
@@ -456,31 +508,32 @@ textarea {
   border-top: 1px solid var(--grey);
 }
 
-.post-content .info {
+.post-info {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.post-content .info p {
+.post-info p {
   margin: 1rem 0;
   font-weight: 700;
 }
 
+.post-info span {
+  color: var(--primaryColor);
+}
+
 @media (min-width: 768px) {
-  .post-content .info {
+  .post-info {
     flex-direction: row;
   }
-  .post-content .info p {
+  .post-info p {
     margin: 2rem 0;
   }
 }
 
-.post-content .info span {
-  color: var(--primaryColor);
-}
-
-/* ==== Blog - aside ==== */
+/* [blog.html]  .blog | .aside
+   ========================================================================== */
 
 .aside {
   width: 90%;
@@ -496,7 +549,9 @@ textarea {
   font-weight: 700;
 }
 
-/* ==== Gallery ==== */
+/* ==========================================================================
+  [gallery.html]  .gallery
+  ========================================================================== */
 
 .gallery {
   display: grid;
@@ -504,6 +559,12 @@ textarea {
   margin: 0 0 4rem 0;
   list-style: none;
   gap: 2rem;
+}
+
+.gallery img {
+  width: 40rem;
+  height: 40rem;
+  object-fit: cover;
 }
 
 @media (min-width: 768px) {
@@ -518,13 +579,9 @@ textarea {
   }
 }
 
-.gallery img {
-  width: 40rem;
-  height: 40rem;
-  object-fit: cover;
-}
-
-/* ==== Form ==== */
+/* ==========================================================================
+  [contact.html]  .form
+  ========================================================================== */
 
 .form {
   width: 95%;
@@ -553,7 +610,8 @@ textarea {
   background-color: var(--primaryColor);
 }
 
-/* ==== Form - fields ==== */
+/* [contact.html]  .form | .field
+   ========================================================================== */
 
 .field {
   display: flex;
@@ -570,12 +628,15 @@ textarea {
   }
 }
 
-.field input:not([type="radio"]),
 .field textarea,
-.field select {
+.field select,
+.field input:not([type="radio"]) {
   width: 100%;
   padding: 1rem;
 }
+
+/* [contact.html]  .form | .field-radio
+   ========================================================================== */
 
 .field-radio {
   display: flex;
@@ -587,7 +648,8 @@ textarea {
   flex-basis: 9rem;
 }
 
-/* ==== Form - submit  ==== */
+/* [contact.html]  .form | .input-submit
+   ========================================================================== */
 
 .input-submit {
   width: 100%;
