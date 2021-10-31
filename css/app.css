@@ -2,13 +2,15 @@
   --primaryFont: "Playfair Display", serif;
   --secondaryFont: "Raleway", sans-serif;
 
-  --primaryColor: #037bc0;
-  --secondaryColor: #8cbc00;
+  --primaryColor: hsl(202, 97%, 38%);
+  --secondaryColor      : hsl(75, 100%, 37%);
+  --secondaryColorDarken: hsl(75, 100%, 30%);
 
-  --black:#000000;
-  --white:#ffffff;
-  --whiteDarken: #f2f2f2;
-  --grey: #e1e1e1;
+
+  --black:hsl(0, 0%, 0%);
+  --grey: hsl(0, 0%, 88%);
+  --white      : hsl(0, 0%, 100%);
+  --whiteDarken: hsl(0, 0%, 95%);
 }
 
 html {
@@ -23,7 +25,7 @@ html {
 }
 
 body {
-  font-family: "Raleway", sans-serif;
+  font-family: var(--secondaryFont);
   font-size: 1.6rem;
   line-height: 2;
 }
@@ -33,7 +35,7 @@ body {
 h1,
 h2,
 h3 {
-  font-family: "Playfair Display", serif;
+  font-family: var(--primaryFont);
 }
 
 h1 {
@@ -59,7 +61,7 @@ h3 {
 }
 
 a {
-  color: #000;
+  color: var(--black);
   text-decoration: none;
 }
 
@@ -91,14 +93,14 @@ textarea {
   color: #fff;
   text-align: center;
   text-transform: uppercase;
-  background-color: #8cbc00;
+  background-color: var(--secondaryColor);
   border: none;
   transition: background-color 0.3s ease-out;
 }
 
 .btn:hover {
   cursor: pointer;
-  background-color: #769c02;
+  background-color: var(--secondaryColorDarken);
 }
 
 @media (min-width: 768px) {
@@ -114,11 +116,11 @@ textarea {
 }
 
 .site-name span {
-  color: #037bc0;
+  color: var(--primaryColor);
 }
 
 .nav-conteiner {
-  border: 1px solid #e1e1e1;
+  border: 1px solid var(--grey);
 }
 
 .nav-principal {
@@ -142,7 +144,7 @@ textarea {
 .nav-principal a:hover,
 .nav-active {
   font-weight: 700;
-  background-color: hsl(0, 0%, 96%);
+  background-color: var(--whiteDarken);
 }
 
 /* ==== Hero ==== */
@@ -196,8 +198,8 @@ textarea {
 }
 
 .category a:hover {
-  color: white;
-  background-color: #037bc0;
+  color: var(--white);
+  background-color: var(--primaryColor);
   border-bottom-right-radius: 2rem;
 }
 
@@ -208,8 +210,8 @@ textarea {
       to bottom,
       transparent 0%,
       transparent 50%,
-      #037bc0 50%,
-      #037bc0 100%
+      var(--primaryColor) 50%,
+      var(--primaryColor) 100%
     ),
     url(../img/nosotros.jpg);
   background-repeat: no-repeat;
@@ -223,8 +225,8 @@ textarea {
         to right,
         transparent 0%,
         transparent 50%,
-        #037bc0 50%,
-        #037bc0 100%
+        var(--primaryColor) 50%,
+        var(--primaryColor) 100%
       ),
       url(../img/nosotros.jpg);
     background-position: center left;
@@ -245,7 +247,7 @@ textarea {
 
 .text-us {
   padding: 4rem;
-  color: #fff;
+  color: var(--white);
   grid-row: 2 / 3;
 }
 
@@ -317,9 +319,9 @@ textarea {
   flex-direction: column;
   justify-content: space-evenly;
   padding: 2rem;
-  color: #fff;
+  color: var(--white);
   text-align: center;
-  background-color: #037bc0;
+  background-color: var(--primaryColor);
 }
 
 .product img {
@@ -352,7 +354,7 @@ textarea {
 /* ==== Footer ==== */
 
 .footer {
-  border-top: 1px solid #e1e1e1;
+  border-top: 1px solid var(--grey);
 }
 
 @media (min-width: 768px) {
@@ -388,7 +390,7 @@ textarea {
   padding: 2rem 0;
   margin: 0;
   text-align: center;
-  border-top: 1px solid #e1e1e1;
+  border-top: 1px solid var(--grey);
 }
 
 /* ==== Site Us ==== */
@@ -451,7 +453,7 @@ textarea {
 
 .post {
   margin-bottom: 4rem;
-  border-top: 1px solid #e1e1e1;
+  border-top: 1px solid var(--grey);
 }
 
 .post-content .info {
@@ -475,7 +477,7 @@ textarea {
 }
 
 .post-content .info span {
-  color: #037bc0;
+  color: var(--primaryColor);
 }
 
 /* ==== Blog - aside ==== */
@@ -483,7 +485,7 @@ textarea {
 .aside {
   width: 90%;
   margin: 0 auto;
-  border-top: 1px solid #e1e1e1;
+  border-top: 1px solid var(--grey);
 }
 
 .aside h3 {
@@ -538,17 +540,17 @@ textarea {
 .form fieldset {
   padding: 2rem;
   margin-bottom: 4rem;
-  border: 1px solid #000;
+  border: 1px solid var(--black);
 }
 
 .form legend {
   width: 100%;
   padding: 1rem;
   font-weight: 900;
-  color: #fff;
+  color: var(--white);
   text-align: center;
   text-transform: uppercase;
-  background-color: #037bc0;
+  background-color: var(--primaryColor);
 }
 
 /* ==== Form - fields ==== */
