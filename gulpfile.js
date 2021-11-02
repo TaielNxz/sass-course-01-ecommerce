@@ -86,4 +86,4 @@ exports.js = js;
 exports.images = images;
 exports.imagesWebp = imagesWebp;
 exports.imagesAvif = imagesAvif;
-exports.default = series( images, imagesWebp, imagesAvif, html, css, dev );
+exports.default = series( images, imagesWebp, imagesAvif, js, html, css, dev );

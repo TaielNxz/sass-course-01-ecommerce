@@ -33,7 +33,24 @@
     <main class="site-us conteiner">
         <h2 class="title">Sobre Nosotros</h2>
         <div class="us-content">
-            <img src="img/nosotros.jpg" alt="us image">
+            <picture>
+                <source
+                    sizes="1920w" 
+                    srcset="img/nosotros.avif 1920w" 
+                    type="image/avif"
+                    alt="us image">
+                <source
+                    sizes="1920w" 
+                    srcset="img/nosotros.webp 1920w" 
+                    type="image/webp"
+                    alt="us image">
+                <source
+                    sizes="1920w" 
+                    srcset="img/nosotros.jpg 1920w" 
+                    type="image/jpeg"
+                    alt="us image">
+                <img loading="lazy" decoding="async" src="img/nosotros.jpg" lazyalt="imagen" width="500" height="300" alt="us image">
+            </picture>
             <div class="us-description">
                 <p>Quisque non ligula sapien. Etiam convallis consequat diam eu pharetra. Duis dui dui, feugiat ut metus vitae, consequat vulputate dolor. Duis consectetur nec lorem ut posuere. Ut at condimentum turpis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed in sodales velit.</p>
                 <p>Quisque vulputate sapien eu nisl iaculis posuere tristique eget ante. Ut pharetra elit vitae magna vestibulum, et sagittis erat posuere. Pellentesque dolor magna, viverra at fermentum et, luctus imperdiet velit. Mauris dignissim eget mauris sed sodales.</p>
@@ -74,5 +91,7 @@
         </div>
         <p class="copyright">Todos los derechos Reservados, TiendaMuebles</p>
     </footer>
+    
+    <script src="js/app.js"></script>
 </body>
 </html>

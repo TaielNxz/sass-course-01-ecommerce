@@ -38,7 +38,21 @@
                 <article class="post">
                     <h2>Guía de Colores</h2>
                     <div class="post-img">
-                        <img src="img/nosotros.jpg" alt="blog image">
+                        <picture>
+                            <source
+                                 sizes="1920w" 
+                                 srcset="img/nosotros.avif 1920w" 
+                                 type="image/avif">
+                            <source
+                                 sizes="1920w" 
+                                 srcset="img/nosotros.webp 1920w" 
+                                 type="image/webp">
+                            <source
+                                 sizes="1920w" 
+                                 srcset="img/nosotros.jpg 1920w" 
+                                 type="image/jpeg">
+                            <img loading="lazy" decoding="async" src="img/nosotros.jpg" width="500" height="300" alt="blog image">
+                        </picture>
                     </div>
                     <div class="post-content">
                         <div class="post-info">
@@ -55,7 +69,21 @@
                 <article class="post">
                     <h2>Guía de Colores</h2>
                     <div class="post-img">
-                        <img src="img/nosotros.jpg" alt="blog image">
+                        <picture>
+                            <source
+                                 sizes="1920w" 
+                                 srcset="img/nosotros.avif 1920w" 
+                                 type="image/avif">
+                            <source
+                                 sizes="1920w" 
+                                 srcset="img/nosotros.webp 1920w" 
+                                 type="image/webp">
+                            <source
+                                 sizes="1920w" 
+                                 srcset="img/nosotros.jpg 1920w" 
+                                 type="image/jpeg">
+                            <img loading="lazy" decoding="async" src="img/nosotros.jpg" width="500" height="300" alt="blog image">
+                        </picture>
                     </div>
                     <div class="post-content">
                         <div class="post-info">
@@ -115,5 +143,7 @@
         </div>
         <p class="copyright">Todos los derechos Reservados, TiendaMuebles</p>
     </footer>
+    
+    <script src="js/app.js"></script>
 </body>
 </html>
